@@ -1,100 +1,221 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>LineLess - Vehicle Service Booking</title>
+    <title>LineLess</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f7ff;
+            color: #222;
+        }
+
+        header {
+            background-color: #246bfd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .hero {
+            background-color: #dce9ff;
+        }
+
+        .hero h2 {
+            color: #174ea6;
+            font-size: 40px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        button {
+            background-color: #246bfd;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #174ea6;
+        }
+
+        .features {
+            background-color: white;
+        }
+
+        .card {
+            background-color: #f2f7ff;
+            display: inline-block;
+            width: 25%;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #dce9ff;
+        }
+
+        .card h3 {
+            color: #246bfd;
+        }
+
+        .how {
+            background-color: #172b4d;
+            color: white;
+        }
+
+        .how h2 {
+            color: #ffd166;
+        }
+
+        .about {
+            background-color: #e8f8f1;
+        }
+
+        .about h2 {
+            color: #16865b;
+        }
+
+        footer {
+            background-color: #172b4d;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+    </style>
 </head>
+
 
 <body>
 
+    <!-- Header -->
     <header>
+
         <h1>LineLess</h1>
-        <p>Skip the Queue. Save Your Time.</p>
 
         <nav>
-            <a href="#home">Home</a> |
-            <a href="#how-it-works">How It Works</a> |
-            <a href="#features">Features</a> |
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
             <a href="#about">About</a>
         </nav>
+
     </header>
 
-    <hr>
 
-    <section id="home">
-        <h2>Vehicle Service Without the Long Wait</h2>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <h2>Skip the Queue. Save Your Time.</h2>
 
         <p>
-            LineLess allows customers to book bike and car washing
-            or servicing appointments online, join a virtual queue,
-            and track their vehicle's service status.
+            Book your bike or car washing and servicing
+            appointment online.
+        </p>
+
+        <p>
+            Join a virtual queue, track your position,
+            and know when your vehicle is ready.
         </p>
 
         <button>Book an Appointment</button>
+
     </section>
 
-    <hr>
 
-    <section>
-        <h2>The Problem</h2>
+    <!-- Features -->
+    <section id="features" class="features">
+
+        <h2>Why Choose LineLess?</h2>
+
+        <div class="card">
+            <h3>Online Booking</h3>
+            <p>
+                Book your vehicle service online
+                without visiting the center.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Virtual Queue</h3>
+            <p>
+                Get a digital token and track
+                your position in the queue.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Service Tracking</h3>
+            <p>
+                Track your vehicle's service status
+                and estimated waiting time.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how">
+
+        <h2>How It Works</h2>
+
+        <p>1. Choose your service.</p>
+        <p>2. Book an appointment.</p>
+        <p>3. Receive your digital token.</p>
+        <p>4. Track your queue.</p>
+        <p>5. Get notified when your turn is near.</p>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>A Smarter Way to Service Your Vehicle</h2>
 
         <p>
-            Bike and car washing and servicing centers often have
-            long queues during busy hours. Customers have to wait
-            without knowing exactly when their vehicle will be serviced.
+            LineLess helps customers save time and avoid
+            overcrowded service centers by providing online
+            booking, virtual queues, notifications, and
+            vehicle service tracking in one simple app.
         </p>
 
-        <p>
-            This leads to wasted time, overcrowding, and inconvenience.
-        </p>
+        <button>Get Started</button>
+
     </section>
 
-    <hr>
 
-    <section id="how-it-works">
-        <h2>How LineLess Works</h2>
-
-        <ol>
-            <li>Book a service appointment online.</li>
-            <li>Receive a digital token.</li>
-            <li>Track your position in the virtual queue.</li>
-            <li>Get notified when your turn is approaching.</li>
-            <li>Track your vehicle's service status.</li>
-        </ol>
-    </section>
-
-    <hr>
-
-    <section id="features">
-        <h2>Our Features</h2>
-
-        <ul>
-            <li>Online Appointment Booking</li>
-            <li>Digital Tokens</li>
-            <li>Virtual Queue Tracking</li>
-            <li>Estimated Waiting Time</li>
-            <li>Turn Notifications</li>
-            <li>Vehicle Service Tracking</li>
-        </ul>
-    </section>
-
-    <hr>
-
-    <section id="about">
-        <h2>About LineLess</h2>
-
-        <p>
-            LineLess is designed to make vehicle washing and servicing
-            more convenient by reducing unnecessary waiting and
-            overcrowding at service centers.
-        </p>
-    </section>
-
-    <hr>
-
+    <!-- Footer -->
     <footer>
-        <h3>LineLess</h3>
+
+        <h2>LineLess</h2>
+
         <p>Skip the queue. Save your time.</p>
-        <p>&copy; 2026 LineLess</p>
+
+        <p>© 2026 LineLess</p>
+
     </footer>
 
 </body>
