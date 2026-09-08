@@ -1,7 +1,7 @@
 function sum() {
-    var number1 = parseFloat(document.getElementById('num1').value);
-    var number2 = parseFloat(document.getElementById('num2').value);
-    var sum = number1 + number2;
-    document.getElementById('result').innerText = 'Result: ' + sum;
-    }
+    let num1= Number(document.getElementById("num1").value);
+    let num2= Number(document.getElementById("num2").value);
+    let result= num1 + num2;
+    document.getElementById("result").innerHTML= "The sum is: " + result;
+}
   
