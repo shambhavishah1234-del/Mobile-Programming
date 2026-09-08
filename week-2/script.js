@@ -9,12 +9,12 @@ function multiply(){
     let num1= Number(document.getElementById("num1").value);
     let num2= Number(document.getElementById("num2").value);
     let result= num1 * num2;
-    document.getElementById("results").innerHTML= "The product is: " + result;
+    document.getElementById("result").innerHTML= "The product is: " + result;
 }
 
 function sub(){
     let num1= Number(document.getElementById("num1").value);
     let num2= Number(document.getElementById("num2").value);
     let result= num1 - num2;
-    document.getElementById("results").innerHTML= "The difference is: " + result;
+    document.getElementById("result").innerHTML= "The difference is: " + result;
 }
