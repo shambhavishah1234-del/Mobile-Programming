@@ -13,11 +13,11 @@ if (operation == "Sub"){
     calculate = Num2 - Num1;
 }
 
-if (operation == "Mul"){
+else if (operation == "Mul"){
     calculate = Num1 * Num2;
 }
 
-if (operation == "Div"){
+else if (operation == "Div"){
     calculate = Num2 / Num1;
 }
 
