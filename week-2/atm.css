@@ -1,0 +1,58 @@
+/* Page */
+body {
+    font-family: Arial;
+    background-color: lightgray;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Main heading */
+h1 {
+    color: white;
+    background-color: blue;
+    padding: 15px;
+}
+
+/* Other heading */
+h2 {
+    color: blue;
+}
+
+/* Paragraph */
+p {
+    font-size: 16px;
+}
+
+/* Input boxes */
+input {
+    padding: 10px;
+    margin: 5px;
+    width: 250px;
+}
+
+/* Buttons */
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* When mouse is on button */
+button:hover {
+    background-color: darkblue;
+}
+
+/* Result area */
+#result {
+    background-color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Message */
+#message {
+    font-weight: bold;
+}

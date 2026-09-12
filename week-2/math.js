@@ -9,7 +9,7 @@ if (operation == "Add"){
     calculate = Num1 + Num2;
 }
 
-if (operation == "Sub"){
+else if (operation == "Sub"){
     calculate = Num2 - Num1;
 }
 
