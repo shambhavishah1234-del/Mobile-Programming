@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Card</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        .card {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .profile {
+            width: 120px;
+            height: 120px;
+        }
+
+        #qr {
+            display: none;
+        }
+
+        #qr img {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <img class="profile" src="profile.png">
+
+        <h2>Shambhawi Shah</h2>
+
+        <p>Address: Kathmandu, Nepal</p>
+
+        <button id="show">Show QR</button>
+        <button id="close">Close QR</button>
+
+        <div id="qr">
+            <p>My QR Code</p>
+            <img src="sam.qr.png">
+        </div>
+
+    </div>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $("#show").click(function() {
+                $("#qr").show();
+            });
+
+            $("#close").click(function() {
+                $("#qr").hide();
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
