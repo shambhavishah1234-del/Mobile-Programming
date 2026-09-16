@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Practice</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2ff;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4f46e5;
+        }
+
+        #profile-card {
+            width: 450px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        #profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4f46e5;
+        }
+
+        #student-bio {
+            color: #666;
+        }
+
+        #nickname-input {
+            padding: 10px;
+            width: 220px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .controls {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls h2 {
+            text-align: center;
+            color: #4f46e5;
+            font-size: 18px;
+        }
+
+        .button-group {
+            text-align: center;
+            margin: 10px 0 20px;
+        }
+
+        button {
+            padding: 9px 14px;
+            margin: 4px;
+            border: none;
+            border-radius: 7px;
+            background: #4f46e5;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        #skills-list {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        #skills-list li {
+            background: #e0e7ff;
+            color: #3730a3;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            text-align: center;
+            min-height: 20px;
+        }
+
+        .highlighted {
+            border: 5px solid #facc15 !important;
+        }
+
+        .dark-mode {
+            background: #222 !important;
+            color: white;
+        }
+
+        .dark-mode #student-bio {
+            color: #ddd;
+        }
+
+        .rounded {
+            border-radius: 20px !important;
+        }
+
+        .shadow {
+            box-shadow: 0 0 25px #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>jQuery Practice</h1>
+
+    <div id="profile-card">
+
+        <img id="profile-photo"
+             src="profile.png"
+             alt="Profile Photo">
+
+        <h2 id="student-name">Student Name</h2>
+
+        <p id="student-bio">
+            I am a <b>beginner</b> learning jQuery.
+        </p>
+
+        <input type="text" id="nickname-input" placeholder="Enter nickname">
+
+        <h3>Skills</h3>
+
+        <ul id="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+        </ul>
+
+    </div>
+
+
+    <div class="controls">
+
+        <h2>GET & SET</h2>
+
+        <div class="button-group">
+            <button id="show-name">Show Name</button>
+            <button id="change-name">Change Name</button>
+            <button id="show-bio">Show Bio</button>
+            <button id="get-input">Get Input</button>
+            <button id="set-input">Set Input</button>
+        </div>
+
+
+        <h2>CSS CLASSES</h2>
+
+        <div class="button-group">
+            <button id="highlight-card">Highlight Card</button>
+            <button id="remove-highlight">Remove Highlight</button>
+            <button id="toggle-dark-mode">Toggle Dark Mode</button>
+            <button id="toggle-rounded">Toggle Rounded</button>
+        </div>
+
+
+        <h2>CSS METHOD</h2>
+
+        <div class="button-group">
+            <button id="red-background">Red Background</button>
+            <button id="reset-background">Reset Background</button>
+        </div>
+
+
+        <h2>HIDE & SHOW</h2>
+
+        <div class="button-group">
+            <button id="hide-photo">Hide Photo</button>
+            <button id="show-photo">Show Photo</button>
+            <button id="toggle-bio">Toggle Bio</button>
+        </div>
+
+
+        <h2>FADE</h2>
+
+        <div class="button-group">
+            <button id="fade-out-card">Fade Out Card</button>
+            <button id="fade-in-card">Fade In Card</button>
+            <button id="fade-50">Fade to 50%</button>
+        </div>
+
+
+        <h2>SLIDE</h2>
+
+        <div class="button-group">
+            <button id="slide-up-skills">Slide Up Skills</button>
+            <button id="slide-down-skills">Slide Down Skills</button>
+            <button id="slide-toggle-skills">Slide Toggle Skills</button>
+        </div>
+
+
+        <h2>ANIMATE</h2>
+
+        <div class="button-group">
+            <button id="animate-card">Animate Card</button>
+        </div>
+
+
+        <div id="output"></div>
+
+    </div>
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            // 1. GET & SET
+
+            $("#show-name").click(function () {
+                $("#output").text($("#student-name").text());
+            });
+
+            $("#change-name").click(function () {
+                $("#student-name").text("Shambhawi Shah");
+            });
+
+            $("#show-bio").click(function () {
+                $("#output").text($("#student-bio").html());
+            });
+
+            $("#get-input").click(function () {
+                $("#output").text($("#nickname-input").val());
+            });
+
+            $("#set-input").click(function () {
+                $("#nickname-input").val("jQuery Pro");
+            });
+
+
+            // 2. CSS CLASSES
+
+            $("#highlight-card").click(function () {
+                $("#profile-card").addClass("highlighted");
+            });
+
+            $("#remove-highlight").click(function () {
+                $("#profile-card").removeClass("highlighted");
+            });
+
+            $("#toggle-dark-mode").click(function () {
+                $("#profile-card").toggleClass("dark-mode");
+            });
+
+            $("#toggle-rounded").click(function () {
+                $("#profile-photo").toggleClass("rounded");
+            });
+
+
+            // 3. CSS METHOD
+
+           $("#red-background").click(function () {
+    $("#profile-card").css("background-color", "#e74c3c");
+});
+
+$("#reset-background").click(function () {
+    $("#profile-card").css("background-color", "white");
+});
+
+
+            // 4. HIDE & SHOW
+
+            $("#hide-photo").click(function () {
+                $("#profile-photo").hide("slow");
+            });
+
+            $("#show-photo").click(function () {
+                $("#profile-photo").show("slow");
+            });
+
+            $("#toggle-bio").click(function () {
+                $("#student-bio").toggle();
+            });
+
+
+            // 5. FADE
+
+            $("#fade-out-card").click(function () {
+                $("#profile-card").fadeOut();
+            });
+
+            $("#fade-in-card").click(function () {
+                $("#profile-card").fadeIn();
+            });
+
+            $("#fade-50").click(function () {
+                $("#profile-card").fadeTo("slow", 0.5);
+            });
+
+
+            // 6. SLIDE
+
+            $("#slide-up-skills").click(function () {
+                $("#skills-list").slideUp();
+            });
+
+            $("#slide-down-skills").click(function () {
+                $("#skills-list").slideDown();
+            });
+
+            $("#slide-toggle-skills").click(function () {
+                $("#skills-list").slideToggle();
+            });
+
+
+            // 7. ANIMATE
+
+            $("#animate-card").click(function () {
+                $("#profile-card")
+                    .animate({ marginLeft: "200px" }, 1000)
+                    .animate({ marginLeft: "0px" }, 1000);
+            });
+
+
+            // 8. EVENTS
+
+            $("#profile-photo").mouseenter(function () {
+                $("#profile-photo").addClass("shadow");
+            });
+
+            $("#profile-photo").mouseleave(function () {
+                $("#profile-photo").removeClass("shadow");
+            });
+
+            $("#nickname-input").keypress(function (event) {
+                $("#output").text(event.key);
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
