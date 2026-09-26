@@ -1,0 +1,109 @@
+    body {
+        font-family: Arial;
+        background: #eef2ff;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #4f46e5;
+    }
+
+    #profile-card {
+        width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px #ccc;
+    }
+
+    #profile-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+
+    #student-bio {
+        color: #666;
+    }
+
+    #nickname-input {
+        padding: 10px;
+        width: 200px;
+    }
+
+    .controls {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+    }
+
+    h2 {
+        text-align: center;
+        color: #4f46e5;
+    }
+
+    .button-group {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 8px 12px;
+        margin: 4px;
+        border: none;
+        border-radius: 6px;
+        background: #4f46e5;
+        color: white;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #3730a3;
+    }
+
+    #skills-list {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+    }
+
+    #skills-list li {
+        background: #e0e7ff;
+        padding: 8px 12px;
+        border-radius: 20px;
+    }
+
+    #output {
+        margin-top: 20px;
+        padding: 15px;
+        background: #f3f4f6;
+        text-align: center;
+    }
+
+    .highlighted {
+        border: 5px solid yellow;
+    }
+
+    .dark-mode {
+        background: #222;
+        color: white;
+    }
+
+    .dark-mode #student-bio {
+        color: white;
+    }
+
+    .rounded {
+        border-radius: 20px !important;
+    }
+
+    .shadow {
+        box-shadow: 0 0 20px #555;
+    }
